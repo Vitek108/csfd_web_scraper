@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ČSFD scrape web</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+</head>
+<body>
+<nav>
+    <a href="{% url "csfd_app:homepage" %}">Homepage</a> |
+    <a href="{% url "csfd_app:movies" %}">Seznam všech filmů</a> |
+    <a href="{% url "csfd_app:actors" %}">Seznam všech herců</a>
+</nav>
+        {% block content %}
+        {% endblock content%}
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Seznam všech herců A-Z</h1>
+
+<ul>
+    {% for actor in actors %}
+        <li> <a href="{% url "csfd_app:actor-detail" actor.pk %}"> {{ actor.name }} </a> </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

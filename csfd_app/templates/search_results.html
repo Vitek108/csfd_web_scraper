@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br><br>
+<form action="{% url 'csfd_app:result' %}" method="get">
+    {{ form }}
+    <button type="submit">Hledat</button>
+</form>
+   <br><br>
+
+<div class="row">
+    <div class="column">
+        <h2> Nalezení herci: </h2>
+        <ul>
+            {% for actor in object_list %}
+                <li><a href="{% url "csfd_app:actor-detail" actor.pk %}"> {{ actor.name }} </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="column">
+        <h2> Nalezené filmy: </h2>
+            <ul>
+                {% for movie in movies_list %}
+                    <li><a href="{% url "csfd_app:movie-detail" movie.pk %}"> {{ movie.title }} </a></li>
+                {% endfor %}
+            </ul>
+    </div>
+</div>
+{% endblock content %}

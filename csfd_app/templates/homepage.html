@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br><br>
+
+<form action="{% url 'csfd_app:result' %}" method="get">
+    {{ form }}
+    <button type="submit">Hledat</button>
+</form>
+
+{% endblock content %}
