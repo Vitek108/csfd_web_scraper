@@ -33,7 +33,8 @@ class SearchView(ListView, FormView):
 
 def actor_detail(request, actor_id):
     actor = Actors.objects.get(id=actor_id)
-    movies = Movies.objects.filter(actors__name=actor.name)
+    # movies = Movies.objects.filter(actors=actor)
+    movies = actor.movies.all()
     context = {
         "actor": actor,
         "movies": movies
@@ -43,7 +44,7 @@ def actor_detail(request, actor_id):
 
 def movie_detail(request, movie_id):
     movie = Movies.objects.get(id=movie_id)
-    actors = Actors.objects.filter(movies__title=movie.title)
+    actors = movie.actors.all()
     context = {
         "movie": movie,
         "actors": actors

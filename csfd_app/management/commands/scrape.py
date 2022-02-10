@@ -4,8 +4,6 @@ from django.core.management.base import BaseCommand
 from csfd_app.models import Movies, Actors
 
 
-# Spustí se příkazem python manage.py scrape
-
 class Command(BaseCommand):
     def handle(self, *args, **options):
         urls = ["https://www.csfd.cz/zebricky/filmy/nejlepsi/?showMore=1",
@@ -45,4 +43,4 @@ class Command(BaseCommand):
                         a.save()
                         a.movies.add(t)
                         continue
-        self.stdout.write(self.style.SUCCESS("Oukej"))
+        self.stdout.write(self.style.SUCCESS("Data byla úspěšně stažená"))
