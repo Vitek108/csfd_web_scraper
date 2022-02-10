@@ -4,10 +4,10 @@ Jednoduchá Django aplikace, která scrapuje názvy a herce z databáze 300 ČSF
 
 Databáze SQLite je v tomto případě přiložená v repozitáři.
 
-##Stažení databáze
+## Stažení databáze
 Script na stažení dat je implementovaný v management command (csfd_app/management/commands/scrape.py). Pro stažení dat je možné použít příkaz:
 
 <code>python manage.py scrape</code>
 
-##Printscreen aplikace (vyhledávání)
+## Printscreen aplikace (vyhledávání)
 ![ČSFD web](./static/images/csfdweb.png "ČSFD web")
