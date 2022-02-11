@@ -1,13 +1,13 @@
 # ČSFD SCRAPE WEB
 
-Jednoduchá Django aplikace, která scrapuje názvy a herce z databáze 300 ČSFD filmů. Na homepage je vyhledávání, které přináší výsledky jak mezi názvy filmů a jmény herců. Detail filmu zobrazuje herce, kteří v něm hrají. Detail herce zobrazuje filmy, ve kterém hraje.
+A simple Django application that scrapes titles and actors from a database of 300 films from CSFD (Czech-Slovak Film Database). On the homepage there is a search that yields results between both movie titles and actor names. The movie detail shows the actors who star in the movie. The actor detail shows the movies in which they star.
 
-Databáze SQLite je v tomto případě přiložená v repozitáři.
+In this case, the SQLite database is included in the repository.
 
-## Stažení databáze
-Script na stažení dat je implementovaný v management command (csfd_app/management/commands/scrape.py). Pro stažení dat je možné použít příkaz:
+## Download the database
+The script to download the data is implemented in the management command folder (csfd_app/management/commands/scrape.py). Pro stažení dat je možné použít příkaz:
 
 <code>python manage.py scrape</code>
 
-## Printscreen aplikace (vyhledávání)
+## Printscreen of application (search - result page)
 ![ČSFD web](./static/images/csfdweb.png "ČSFD web")
