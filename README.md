@@ -9,5 +9,13 @@ The script to download the data is implemented in the management command folder 
 
 <code>python manage.py scrape</code>
 
+## The app is built with:
+* Python
+* Django
+* Beautifulsoup
+* SQLite
+* HTML
+* Git
+
 ## Printscreen of application (search - result page)
 ![ČSFD web](./static/images/csfdweb.png "ČSFD web")
